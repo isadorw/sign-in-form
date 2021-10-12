@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #EBEBEB;
+}
+
+* {
+    /* define se deve incluir ou não padding e borders. border-box deixa do mesmo tam */
+    box-sizing: border-box;
+}
+
+/* 
+ CORES
+ background: #EBEBEB;
+ cinza claro: #E4E4E4;
+ cinza inputs: #818181;
+ facebook: #375c98;
+ mail: #C54F33;
+ twitter: #4dadf2;
+*/
+
+/* 1st div*/
+.form-container {
+    background: white;
+    /* 150px top/bottom ; 0 nos lados */
+    margin: 150px auto;
+    width: 400px;
+}
+
+form {
+    /* content moves a little bit away from the border */
+    padding: 20px;
+}
+
+/* specify only the h3 inside the form */
+form h3 {
+    /* centralizing 'sign in' */
+    text-align: center;
+}
+
+
+/* PART 1: USER AND PASSWORD */
+
+/* parent of svg (icon user and password) */
+form .input-container {
+    position: relative;
+    /* setting margin between user and password */
+    margin-bottom: 15px;
+}
+
+/* user/password and sign in has width and height */
+form .input-container input, input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+}
+
+form input[type="submit"] {
+    border: 0;
+    background: linear-gradient(to left, #4776E6, #8e54e9);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #4776E6, #8e54e9);
+}
+
+/* adding border to user/password */
+form .input-container input {
+    border: 1px solid #E4E4E4;
+    color: #818181;
+    /* 55px sets a space between the icon and the user */
+    padding: 0 55px 0 25px;
+    font-size: 0.9em;
+    outline-color: #8e54e9;
+}
+
+/* changing the color of the placeholder */
+form .input-container input::placeholder {
+    color: #818181;
+}
+
+/* positioning the icons */
+form .input-container svg {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 20px;
+    color: #818181;
+}
+
+
+/* PART 2: REMEMBER ME AND RESET PASSWORD*/
+
+.options-container {
+    padding: 0 20px;
+    margin: 25px auto;
+    color: #818181;
+}
+
+.options-container .checkbox-container, .options-container a{
+    /* setting display inline-block because the checkbox it's inside a div */
+    display: inline-block;
+    /* IMPORTANT!! remember to put in the html the tag elements side by side */
+    width: 50%;
+}
+
+a {
+    text-align: right;
+    color: #8e54e9;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #4776E6;
+}
+
+/* PART 3: SOCIAL MEDIA ICONS, HR AND SIGN UP*/
+
+form p {
+    color: #818181;
+    text-align: center;
+}
+
+form .social-media-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+form .social-media-container .icon-container {
+    /* ntch-child(1) - facebook */
+    background: #375c98;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+form .social-media-container .icon-container svg {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+    color: white;
+}
+
+form .social-media-container .icon-container:nth-child(2) {
+    background: #C54F33;
+}
+
+form .social-media-container .icon-container:nth-child(3) {
+    background: #4dadf2;
+}
+
+form hr {
+    color: #818181;
+    margin-top: 20px;
+}
+
+.footer {
+    width: fit-content;
+    margin: 20px auto;
+}
